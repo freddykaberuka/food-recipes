@@ -12,8 +12,16 @@ const getFoods = async () => {
       temp.innerHTML = `
       <div>
       <img src="${food.strMealThumb}"/>
+
+      <div class="meal-description">
       <h3>${food.strMeal}</h3>
-      <span><3 likes[5  ]</span>
+      
+      <div class="likes"><i class="fas fa-heart"></i><p>5likes</p></div>
+  </div>
+  <div class="comment">
+      <button>Comments</button>
+  </div>
+</div>
       </div>
       `
       document.getElementById('root').appendChild(temp.content)

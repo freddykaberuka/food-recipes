@@ -30,11 +30,14 @@ header{
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
     margin: 100px;
+    gap: 2px;
 }
+
 .card{
     width: 200px;
     background-color: #fff;
 }
+
 .meal-description{
     display: flex;
     justify-content: space-between;
@@ -68,4 +71,10 @@ footer{
 img {
     width: 50%;
 
+}
+
+.comment {
+    width: 200px;
+    margin-left: 6rem;
+    padding-bottom: 12px;
 }
