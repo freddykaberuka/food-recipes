@@ -41,7 +41,10 @@ function modalsup(e, foods) {
     if (Number(id) === Number(card.idMeal)) {
       console.log(card);
       const img = document.getElementById('img');
+      const foodName = document.getElementById('foodType')
       img.src = `${card.strMealThumb}`;
+      foodName.innerHTML = `${card.strMeal}`
+
       const container = document.getElementById('modals');
       container.style.display = 'block';
     }
