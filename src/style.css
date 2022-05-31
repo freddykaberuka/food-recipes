@@ -88,3 +88,8 @@ img {
 .comment {
   width: 100%;
 }
+
+#comment {
+    width: 200px;
+    height: 200px;
+}
