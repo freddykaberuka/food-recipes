@@ -8,9 +8,8 @@ const getFoods = async () => {
     const foods = await res.json()
     foods.meals.forEach((food) => {
       let temp = document.createElement('template')
-  console.log(food);
       temp.innerHTML = `
-      <div>
+      <div class="card">
       <img src="${food.strMealThumb}"/>
 
       <div class="meal-description">
