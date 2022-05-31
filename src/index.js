@@ -17,13 +17,36 @@ const getFoods = async () => {
       <div class="likes"><i class="fas fa-heart"></i><p>5likes</p></div>
   </div>
   <div class="comment">
-      <button>Comments</button>
+      <button id="${food.idMeal}" type="button" class="showpop">Comments</button>
   </div>
 </div>
       </div>
       `;
     document.getElementById('root').appendChild(temp.content);
   });
+
+  /*eslint-disable*/
+
+  const btns = document.querySelectorAll('.showpop');
+  btns.forEach((btn) => {
+    btn.addEventListener('click', (e) => modalsup(e, foods));
+  });
 };
 
+function modalsup(e, foods) {
+  const foodData = foods.meals;
+  const { id } = e.target;
+
+  foodData.find((card) => {
+    if (Number(id) === Number(card.idMeal)) {
+      console.log(card);
+      const img = document.getElementById('img');
+      img.src = `${card.strMealThumb}`;
+      const container = document.getElementById('modals');
+      container.style.display = 'block';
+    }
+  });
+}
+
 getFoods();
+
