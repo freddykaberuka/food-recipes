@@ -90,11 +90,10 @@ img {
 }
 
 #comment {
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
 }
 
 .modal {
-    display: none;
-    
+  display: none;
 }
