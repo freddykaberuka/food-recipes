@@ -1,5 +1,6 @@
 body {
   background-color: bisque;
+  font-family: 'poppins', sans-serif;
 }
 
 header {
@@ -12,7 +13,6 @@ header {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: #fff;
   text-align: center;
 }
 
@@ -23,11 +23,14 @@ header {
 .link {
   padding: 20px 20px;
   margin-left: 20px;
+  font-size: 44px;
+font-weight: bold;
+font-family: 'lato', sans-serif;
 }
 
 .link a {
   text-decoration: none;
-  color: black;
+  color: rgb(90, 130, 143);
   font-size: 26px;
 }
 
