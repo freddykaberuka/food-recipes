@@ -59,3 +59,13 @@ footer{
     height: 2.5rem;
     border-top: 2px solid black;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+img {
+    width: 50%;
+
+}
