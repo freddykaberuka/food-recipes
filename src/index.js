@@ -1,5 +1,6 @@
 import './style.css';
 import url from './modules/dataUrl';
+import { sendLikes, getLikes } from './modules/comment';
 
 const getFoods = async () => {
   const res = await fetch(url);
@@ -13,7 +14,9 @@ const getFoods = async () => {
       <div class="meal-description">
       <h3>${food.strMeal}</h3>
       
-      <div class="likes"><i class="fas fa-heart"></i><p>5likes</p></div>
+      <div class="likes" id="${food.idMeal}">
+      <i class="fas fa-heart heart" id="${food.idMeal}"></i>
+      <p>5likes</p></div>
   </div>
   <div class="comment">
       <button id="${food.idMeal}" type="button" class="showpop">Comments</button>
@@ -24,8 +27,15 @@ const getFoods = async () => {
     document.getElementById('root').appendChild(temp.content);
   });
 
-  /*eslint-disable*/
+  const likeBtns = document.querySelectorAll('.heart');
+  likeBtns.forEach((heart) => {
+    heart.addEventListener('click', (e) => {
+      sendLikes(e.target.id);
+      getLikes(e.target.id);
+    });
+  });
 
+  /*eslint-disable*/
   const btns = document.querySelectorAll('.showpop');
   btns.forEach((btn) => {
     btn.addEventListener('click', (e) => modalsup(e, foods));
