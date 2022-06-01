@@ -1,6 +1,8 @@
 body {
   background-color: bisque;
   font-family: 'poppins', sans-serif;
+  color: #443e3c;
+
 }
 
 header {
@@ -96,24 +98,25 @@ img {
   width: 200px;
   height: 200px;
   background-color: #fcf7f7;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .modal {
   display: none;
   width: 600px;
   height: 900px;
-  background-color: #e9dbdb;
+  background-color: #d3d3d3;
   margin-left: 22rem;
   align-items: center;
-  display: flex;
   justify-content: center;
   text-align: center;
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
-  overflow: auto;
+  bottom: 23px;
+  overflow: scroll;
 }
 
 .modalimg {
@@ -124,4 +127,11 @@ img {
 .comment-btn {
   width: 90px;
   justify-content: center;
+}
+
+.add-c {
+  margin-left: 5rem;
+  color: #443e3c;
+  font-family: 'lato', sans-serif;
+  
 }
