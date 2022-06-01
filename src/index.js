@@ -1,9 +1,5 @@
 import './style.css';
-import url from './modules/dataUrl.js';
-import closeModalBtn from './modules/functionality.js';
-
-
-
+import url from './modules/dataUrl';
 
 const getFoods = async () => {
   const res = await fetch(url);
