@@ -1,5 +1,7 @@
 import './style.css';
 import url from './modules/dataUrl.js';
+import closeModalBtn from './modules/functionality.js';
+
 
 
 
@@ -53,4 +55,5 @@ function modalsup(e, foods) {
 }
 
 getFoods();
+
 
