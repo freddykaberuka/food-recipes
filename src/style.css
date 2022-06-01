@@ -101,20 +101,23 @@ img {
 .modal {
   display: none;
   width: 600px;
-  height: 700px;
+  height: 900px;
   background-color: #e9dbdb;
-  margin-left: 14rem;
+  margin-left: 22rem;
+  align-items: center;
+  display: flex;
   justify-content: center;
+  text-align: center;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  
 }
 
 .modalimg {
-  width: 50%;
+  width: 460px;
+  margin-top: 4rem;
 }
 
 .comment-btn {
