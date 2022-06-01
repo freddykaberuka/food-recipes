@@ -116,7 +116,7 @@ img {
   right: 0;
   top: 0;
   bottom: 23px;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .modalimg {
@@ -134,4 +134,18 @@ img {
   color: #443e3c;
   font-family: 'lato', sans-serif;
   
+}
+
+/* close button */
+
+span.close {
+  position: absolute;
+  display: flex;
+justify-content: flex-end;
+  left: 0;
+  right: 69px;
+  bottom: 0;
+  top: 0;
+  color: #000;
+  font-size: 44px;
 }
