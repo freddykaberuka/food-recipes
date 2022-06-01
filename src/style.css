@@ -95,15 +95,29 @@ img {
 #comment {
   width: 200px;
   height: 200px;
+  background-color: #fcf7f7;
 }
 
 .modal {
   display: none;
   width: 600px;
   height: 700px;
-  background-color: #fff;
+  background-color: #e9dbdb;
+  margin-left: 14rem;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  
 }
 
 .modalimg {
   width: 50%;
+}
+
+.comment-btn {
+  width: 90px;
+  justify-content: center;
 }
