@@ -100,3 +100,7 @@ img {
 .modal {
   display: none;
 }
+
+.modalimg {
+  width: 50%;
+}
