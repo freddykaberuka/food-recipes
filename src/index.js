@@ -1,7 +1,8 @@
+/*eslint-disable*/
 import './style.css';
 import url from './modules/dataUrl';
-import Comments from "./modules/comment.js";
-import closeModalBtn from "./modules/functionality"
+import Comments from './modules/comment.js';
+import closeModalBtn from './modules/functionality';
 
 const NewComments = new Comments();
 const getFoods = async () => {
@@ -37,7 +38,6 @@ const getFoods = async () => {
     });
   });
 
-  /*eslint-disable*/
   const btns = document.querySelectorAll('.showpop');
   btns.forEach((btn) => {
     btn.addEventListener('click', (e) => modalsup(e, foods));
