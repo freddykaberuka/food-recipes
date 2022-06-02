@@ -21,15 +21,23 @@
 
     <!-- modal -->
     <div id="modals" class="modal">
-        <span class="close">&times;</span>
+        <!-- <span class="close">&times;</span> -->
         <img class="modalimg" id="img" src="#" alt="image">
         <h3 id="foodType"></h3>
-        <h4 class="add-c">Add a comment</h4>
+        <h4 >Comments (<spa class="count-comment">0</spa>)</h4>
+        <div>
+            <h4 class="add-c">Add a comment</h4>
+            <ul class="all-comments">
+
+            </ul>
+      </div>
+      <div class="form-sec">
     <form id="form">
-        <input id="name" type="text" placeholder="name">
-        <input id="comment" type="text" placeholder="write your comment here">
+        <input id="name" type="text" placeholder="name" name="name">
+        <input id="comment" type="text" placeholder="write your comment here" name="comment">
+        <button class="comment-btn" type="submit">comment</button>
     </form>
-    <button class="comment-btn" type="submit">comment</button>
+    </div>
 </div>
 
     <!-- footer  -->
