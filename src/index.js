@@ -1,7 +1,9 @@
 import './style.css';
 import url from './modules/dataUrl';
-import { sendLikes, getLikes } from './modules/comment';
+// import { sendLikes, getLikes } from './modules/comment';
+import Comments from "./modules/comment.js";
 
+const NewComments = new Comments();
 const getFoods = async () => {
   const res = await fetch(url);
   const foods = await res.json();
@@ -49,16 +51,26 @@ function modalsup(e, foods) {
   foodData.find((card) => {
     if (Number(id) === Number(card.idMeal)) {
       console.log(card);
+      NewComments.FetchComments(card.idMeal);
       const img = document.getElementById('img');
       const foodName = document.getElementById('foodType')
       img.src = `${card.strMealThumb}`;
       foodName.innerHTML = `${card.strMeal}`
-
+      commentForm.id = card.idMeal;
       const container = document.getElementById('modals');
       container.style.display = 'block';
     }
   });
 }
+const commentForm = document.getElementById('form')
+commentForm.addEventListener('submit',(e)=>{
+  e.preventDefault()
+  const name = commentForm.name;
+  const textArea = commentForm.comment;
+  NewComments.PostComment({ commentId:commentForm.id, name:name.value, textArea:textArea.value })
+  name.value = '';
+  textArea.value='';
+})
 
 getFoods();
 

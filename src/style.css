@@ -109,12 +109,13 @@ img {
 .modal {
   display: none;
   width: 600px;
-  height: 900px;
+  height: 100%;
   background-color: #d3d3d3;
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: absolute;
+  position: fixed;
+  overflow: scroll;
   left: 0;
   right: 0;
   top: 0;
@@ -143,7 +144,7 @@ img {
 
 /* close button */
 
-span.close {
+/* span.close {
   position: absolute;
   display: flex;
   justify-content: flex-end;
@@ -153,7 +154,7 @@ span.close {
   top: 0;
   color: #000;
   font-size: 44px;
-}
+} */
 
 /* form  */
 
@@ -183,4 +184,7 @@ span.close {
   border-radius: 10px;
   padding: 12px;
   margin-left: 13rem;
+}
+.form-sec{
+  display: flex;
 }
