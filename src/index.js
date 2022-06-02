@@ -1,7 +1,7 @@
 import './style.css';
 import url from './modules/dataUrl';
-// import { sendLikes, getLikes } from './modules/comment';
 import Comments from "./modules/comment.js";
+import closeModalBtn from "./modules/functionality"
 
 const NewComments = new Comments();
 const getFoods = async () => {
