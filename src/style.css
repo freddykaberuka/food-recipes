@@ -8,7 +8,6 @@ body {
   background-color: #fff;
   font-family: 'poppins', sans-serif;
   background-repeat: no-repeat;
-  background-size: contain;
   color: #443e3c;
 }
 
@@ -46,18 +45,20 @@ header {
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  text-align: center;
-  margin: 100px;
-  gap: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 67%;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 0.5rem;
+  margin-top: 71px;
 }
 
 .card {
   background-color: #fff;
-  margin: 20px;
-  width: 80%;
+  margin: 10px;
   height: 40%;
+  border-radius: 10px;
 }
 
 .meal-description {
@@ -90,12 +91,13 @@ footer {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
 }
 
 img {
   width: 100%;
   object-fit: cover;
+  border-radius: 17px;
 }
 
 .comment {
