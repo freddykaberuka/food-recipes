@@ -107,7 +107,7 @@ img {
 .modal {
   display: none;
   width: 600px;
-  height: 900px;
+  height: 100%;
   background-color: #d3d3d3;
   align-items: center;
   justify-content: center;
@@ -156,12 +156,12 @@ img {
 
 /* form  */
 
-/* #form {
+#form {
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-} */
+}
 
 /* name input  */
 
