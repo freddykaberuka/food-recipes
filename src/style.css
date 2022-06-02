@@ -4,8 +4,11 @@
 }
 
 body {
-  background-color: bisque;
+  background-image: url(https://i0.wp.com/diplomartbrussels.com/wp-content/uploads/2020/09/food-background-images-94-images-in-co-381169-png-images-pngio-food-background-png-1440_619.png?ssl=1);
+  background-color: #fff;
   font-family: 'poppins', sans-serif;
+  background-repeat: no-repeat;
+  background-size: contain;
   color: #443e3c;
 }
 
