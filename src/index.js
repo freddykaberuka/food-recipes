@@ -19,7 +19,7 @@ const getFoods = async () => {
       
       <div class="likes" id="${food.idMeal}">
       <i class="fas fa-heart heart" id="${food.idMeal}"></i>
-      <p>5likes</p></div>
+      <p>${food.item_id}</p></div>
   </div>
   <div class="comment">
       <button id="${food.idMeal}" type="button" class="showpop">Comments</button>
@@ -27,6 +27,8 @@ const getFoods = async () => {
 </div>
       </div>
       `;
+
+
     document.getElementById('root').appendChild(temp.content);
   });
 
@@ -72,6 +74,16 @@ commentForm.addEventListener('submit',(e)=>{
   textArea.value='';
 })
 
+
 getFoods();
+
+const likesNumber = document.createElement('p');
+likesNumber.className = 'likes-number';
+for (let i = 0; i < liked.length; i += 1) {
+  if (idMeal === liked[i].item_id) {
+    likesNumber.textContent = `${liked[i].likes}`;
+  }
+}
+
 
 
