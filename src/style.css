@@ -26,6 +26,8 @@ header {
   text-align: center;
 }
 
+/* header  */
+
 .links {
   display: flex;
 }
@@ -42,6 +44,15 @@ header {
   text-decoration: none;
   color: rgb(90, 130, 143);
   font-size: 26px;
+}
+
+.header {
+  background: #f5f6f1cc;
+  border-radius: 0 0 17px 17px;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .cards {
@@ -92,6 +103,7 @@ footer {
 .container {
   display: grid;
   grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  padding-top: 88px;
 }
 
 img {
@@ -188,3 +200,5 @@ span.close {
 .form-sec{
   display: flex;
 }
+
+
