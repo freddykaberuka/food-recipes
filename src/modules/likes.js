@@ -1,3 +1,6 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+// eslint-disable-next-line import/no-named-as-default
 import likesUrl from './dataUrl';
 
 export const likesCounter = (data, id) => {
@@ -11,7 +14,7 @@ export const likesCounter = (data, id) => {
   return likesNumber;
 };
 
-export const fetchLikes = async (url) => {
+export const fetchLikes = async (_url) => {
   try {
     const response = await fetch(likesUrl);
     const data = await response.json();
@@ -39,7 +42,7 @@ const displaylikes = async (likeBtn) => {
   likeBtn.nextSibling.textContent = parseInt(likeBtn.nextSibling.textContent, 10) + 1;
 };
 
-export const getLikesNumber = (likesUrl) => {
+export const getLikesNumber = (_likesUrl) => {
   const likesNumber = document.querySelectorAll('.heart');
   likesNumber.forEach((likeBtn) => {
     likeBtn.addEventListener('click', () => {

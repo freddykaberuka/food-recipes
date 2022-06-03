@@ -156,15 +156,12 @@ img {
 /* close button */
 
 span.close {
-  position: absolute;
   display: flex;
   justify-content: flex-end;
-  left: 0;
-  right: 69px;
-  bottom: 0;
-  top: 0;
+  padding-right: 20px;
   color: #000;
   font-size: 44px;
+  cursor: pointer;
 }
 
 /* form  */
@@ -199,4 +196,8 @@ span.close {
 
 .form-sec {
   display: flex;
+}
+
+.btn-com button {
+  margin-left: 100px;
 }
