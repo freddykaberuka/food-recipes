@@ -1,5 +1,4 @@
 /*eslint-disable*/
-// const likes = [];
 import { g } from '../utils'
 
 const likesUrl = "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RoXIqhnkeneDm1enyFkb/likes/"
@@ -17,9 +16,6 @@ export const likesCounter = (data, id) => {
 
 export const fetchLikes = async (url, callback) => {
 
-  // callback(data)
-
-  // likes.push(data);
 };
 
 export const getLikes = async () => {
@@ -36,20 +32,6 @@ export const getLikes = async () => {
       e.innerText = lData.likes
     }
   });
-  // const hearts = document.querySelectorAll('.heart');
-  // const likeCounter = document.querySelectorAll('.like-p');
-
-
-  // hearts.forEach((heart, index) => {
-  //   let counter = 0;
-
-  //   heart.addEventListener('click', (e) => {
-  //     e.preventDefault();
-  //     postLikes(likesUrl, images[index].idMeal);
-  //     counter += 1;
-  //     likeCounter[index].innerHTML = `${likes[index] + counter} Likes`;
-  //   });
-  // });
 };
 
 export const postLikes = async (likesUrl, likeBtn) => {
