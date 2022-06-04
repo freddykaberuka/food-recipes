@@ -2,8 +2,8 @@
 import './style.css';
 import url from './modules/dataUrl';
 import Comments from './modules/comment.js';
-import closeModalBtn from './modules/functionality';
-
+import Likes from './modules/likes.js';
+const NewLikes = new Likes();
 const NewComments = new Comments();
 const getFoods = async () => {
   const res = await fetch(url);
@@ -13,13 +13,12 @@ const getFoods = async () => {
     temp.innerHTML = `
       <div class="card">
       <img src="${food.strMealThumb}"/>
-
       <div class="meal-description">
       <h3>${food.strMeal}</h3>
       
-      <div class="likes" id="${food.idMeal}">
-      <i class="fas fa-heart heart" id="${food.idMeal}"></i>
-      <p>${food.item_id}</p></div>
+      <div class="likes" id="cont${food.idMeal}">
+      <i class="fas fa-heart heart" id="heart${food.idMeal}"></i>
+      <p id="likecount${food.idMeal}">0</p></div>
   </div>
   <div class="comment">
       <button id="${food.idMeal}" type="button" class="showpop">Comments</button>
@@ -27,29 +26,22 @@ const getFoods = async () => {
 </div>
       </div>
       `;
-
-
     document.getElementById('root').appendChild(temp.content);
   });
-
   const likeBtns = document.querySelectorAll('.heart');
   likeBtns.forEach((heart) => {
     heart.addEventListener('click', (e) => {
-      sendLikes(e.target.id);
-      getLikes(e.target.id);
+      NewLikes.postLike(e.target.id)
     });
   });
-
   const btns = document.querySelectorAll('.showpop');
   btns.forEach((btn) => {
     btn.addEventListener('click', (e) => modalsup(e, foods));
   });
 };
-
 function modalsup(e, foods) {
   const foodData = foods.meals;
   const { id } = e.target;
-
   foodData.find((card) => {
     if (Number(id) === Number(card.idMeal)) {
       console.log(card);
@@ -73,17 +65,7 @@ commentForm.addEventListener('submit',(e)=>{
   name.value = '';
   textArea.value='';
 })
-
-
 getFoods();
-
-const likesNumber = document.createElement('p');
-likesNumber.className = 'likes-number';
-for (let i = 0; i < liked.length; i += 1) {
-  if (idMeal === liked[i].item_id) {
-    likesNumber.textContent = `${liked[i].likes}`;
-  }
-}
-
-
-
+window.addEventListener('load',()=>{
+  NewLikes.fetchLikes();
+})
