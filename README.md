@@ -20,6 +20,14 @@
 - Twitter: [@KayongaChiteta3](https://twitter.com/KayongaChiteta3?t=gfILCjmltzGRZOx6FZ8-nQ&s=08)
 - LinkedIn: [Kkayonga Chiteta](https://www.linkedin.com/in/kayonga-chiteta-776949227)
 
+## Author 2
+ 
+ 👤 **Kayonga Chiteta**
+
+- GitHub: [@Kaberuka](https://github.com/freddykaberuka)
+- Twitter: [@trojan07](https://twitter.com/trojan07)
+- LinkedIn: [Freddy Kaberuka]([https://www.linkedin.com/in/kayonga-chiteta-776949227](https://www.linkedin.com/in/kaberuka-freddy-853b08153/))
+
  You can start editing the files in the "src" folder
 
 ## Happy coding! 🌈
