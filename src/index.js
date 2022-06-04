@@ -3,7 +3,8 @@ import './style.css';
 import url from './modules/dataUrl';
 import Comments from './modules/comment.js';
 import closeModalBtn from './modules/functionality';
-
+const likeUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RoXIqhnkeneDm1enyFkb/likes/';
+import {postLikes, getLikeElements} from './modules/likes';
 const NewComments = new Comments();
 const getFoods = async () => {
   const res = await fetch(url);
@@ -19,7 +20,7 @@ const getFoods = async () => {
       
       <div class="likes" id="${food.idMeal}">
       <i class="fas fa-heart heart" id="${food.idMeal}"></i>
-      <p>${food.item_id}</p></div>
+      <p class="like-p"></p></div>
   </div>
   <div class="comment">
       <button id="${food.idMeal}" type="button" class="showpop">Comments</button>
@@ -28,15 +29,14 @@ const getFoods = async () => {
       </div>
       `;
 
-
+      getLikeElements(foods.meals);
     document.getElementById('root').appendChild(temp.content);
   });
 
   const likeBtns = document.querySelectorAll('.heart');
   likeBtns.forEach((heart) => {
     heart.addEventListener('click', (e) => {
-      sendLikes(e.target.id);
-      getLikes(e.target.id);
+      postLikes(likeUrl,e.target.id)
     });
   });
 
@@ -77,7 +77,7 @@ commentForm.addEventListener('submit',(e)=>{
 
 getFoods();
 
-const likesNumber = document.createElement('p');
+const likesNumber = document.querySelector('.like-p');
 likesNumber.className = 'likes-number';
 for (let i = 0; i < liked.length; i += 1) {
   if (idMeal === liked[i].item_id) {

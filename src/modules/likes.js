@@ -1,5 +1,7 @@
 import likesUrl from './dataUrl';
 
+let likes = []
+
 export const likesCounter = (data, id) => {
   const likeArryLength = data.length;
   let likesNumber;
@@ -13,25 +15,41 @@ export const likesCounter = (data, id) => {
 
 export const fetchLikes = async (url) => {
   try {
-    const response = await fetch(likesUrl);
+    const response = await fetch(url);
     const data = await response.json();
-    return data;
+    console.log(data);
+    // return data;
+    likes.push(data)
   } catch (error) {
     throw Error(error);
   }
 };
 
-const postLikes = async (likesUrl, likeBtn) => {
+export const getLikeElements = (images) => {
+  const hearts = document.querySelectorAll('.heart');
+  const likeCounter = document.querySelectorAll('.like-p');
+  hearts.forEach((heart, index) => {
+    let counter = 0;
+    heart.addEventListener('click', (e) => {
+      e.preventDefault();
+      postLikes(likesUrl,images[index].idMeal);
+      counter += 1;
+      likeCounter[index].innerHTML = `${likes[index] + counter} Likes`;
+    });
+  });
+};
+
+export const postLikes = async (likesUrl, likeBtn) => {
   await fetch(likesUrl, {
     method: 'POST',
     body: JSON.stringify({
-      item_id: likeBtn.id,
+      item_id: likeBtn,
     }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
-  await fetchLikes(url, likeBtn);
+  await fetchLikes(likesUrl);
 };
 
 const displaylikes = async (likeBtn) => {
@@ -43,7 +61,7 @@ export const getLikesNumber = (likesUrl) => {
   const likesNumber = document.querySelectorAll('.heart');
   likesNumber.forEach((likeBtn) => {
     likeBtn.addEventListener('click', () => {
-      postLikes(url, likeBtn);
+      postLikes(likesUrl, likeBtn);
       displaylikes(likeBtn);
     });
   });
