@@ -1,6 +1,8 @@
+/*eslint-disable*/
+
 import likesUrl from './dataUrl';
 
-let likes = []
+const likes = [];
 
 export const likesCounter = (data, id) => {
   const likeArryLength = data.length;
@@ -17,9 +19,7 @@ export const fetchLikes = async (url) => {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data);
-    // return data;
-    likes.push(data)
+    likes.push(data);
   } catch (error) {
     throw Error(error);
   }
@@ -32,7 +32,7 @@ export const getLikeElements = (images) => {
     let counter = 0;
     heart.addEventListener('click', (e) => {
       e.preventDefault();
-      postLikes(likesUrl,images[index].idMeal);
+      postLikes(likesUrl, images[index].idMeal);
       counter += 1;
       likeCounter[index].innerHTML = `${likes[index] + counter} Likes`;
     });

@@ -1,4 +1,4 @@
-import { likesCounter } from '../modules/likes.js';
+import { likesCounter } from '../likes';
 
 const data1 = [
   { id: 0, likes: 1111 },
