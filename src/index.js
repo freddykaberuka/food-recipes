@@ -50,12 +50,10 @@ const getFoods = async () => {
   });
 };
 
-function modalsup(e, foods) {
+const modalsup = (e, foods) =>{
   const foodData = foods.meals;
 
   const id =  e.target.value;
-
-  console.log(id);
 
   foodData.find((card) => {
     if (Number(id) === Number(card.idMeal)) {
