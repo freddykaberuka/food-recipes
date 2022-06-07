@@ -6,11 +6,16 @@ import closeModalBtn from './modules/functionality';
 const likeUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RoXIqhnkeneDm1enyFkb/likes/';
 import { postLikes, getLikes } from './modules/likes';
 import { g, t } from './utils';
-const NewComments = new Comments();
 
+
+const NewComments = new Comments();
 const getFoods = async () => {
   const res = await fetch(url);
   const foods = await res.json();
+  const CountDisplay = document.querySelector('.count-display');
+  const data = foods.meals.length;
+  CountDisplay.innerHTML = data
+
 
   foods.meals.forEach((food) => {
     g('root').appendChild(t(`<div class="card">
@@ -48,7 +53,6 @@ const getFoods = async () => {
     btn.addEventListener('click', (e) => modalsup(e, foods));
   });
 };
-
 const modalsup = (e, foods) =>{
   const foodData = foods.meals;
 
