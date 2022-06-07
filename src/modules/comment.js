@@ -2,8 +2,8 @@
 import CountComments from './CountComments';
 
 class Comments {
-  FetchComments = (itemId) => {
-    fetch(
+  FetchComments = async(itemId) => {
+    await fetch(
       `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/tJRup0Me8cP9OobHqxUY/comments?item_id=${itemId}`,
     )
       .then((res) => res.json())
@@ -23,7 +23,7 @@ class Comments {
       });
   };
 
-  PostComment = ({ commentId, name, textArea }) => {
+  PostComment = async ({ commentId, name, textArea }) => {
     console.log(commentId, name, textArea);
     const config = {
       method: 'POST',
@@ -38,7 +38,7 @@ class Comments {
       }),
     };
 
-    fetch(
+    await fetch(
       'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/tJRup0Me8cP9OobHqxUY/comments',
       config,
     ).then(() => this.FetchComments(commentId));

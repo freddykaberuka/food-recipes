@@ -38,7 +38,6 @@ const getFoods = async () => {
 
   likeBtns.forEach((heart) => {
     heart.addEventListener('click', (e) => {
-      // alert("hjk")
       postLikes(likeUrl, e.target.id)
     });
   });
