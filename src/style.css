@@ -25,10 +25,12 @@ header {
   border-radius: 50%;
   text-align: center;
 }
+
 #heading {
   display: flex;
 }
-#heading1{
+
+#heading1 {
   padding-left: 20px;
 }
 
@@ -204,6 +206,7 @@ span.close {
 .form-sec {
   display: flex;
 }
-#count-display { 
+
+#count-display {
   font-size: 30px;
 }
