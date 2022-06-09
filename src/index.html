@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capstone setup</title>
+    <link href="//fonts.googleapis.com/css?family=Allison&subset=latin" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/870e4168d3.js" crossorigin="anonymous"></script>
+    <title>Capstone</title>
 </head>
 <body>
-    <h1>Hello webpack!</h1>
+    <header class="header">
+        <div class="logo" id="heading">
+            <img class="logo" src="https://www.kindpng.com/picc/m/193-1932544_indian-food-beverage-logo-hd-png-download.png" alt="restaurant-logo"/>
+            <h2 id="heading1">KC99 Restaurant Food list </h2>
+            </div>
+        <div class="links">
+            <div class="link"><a href="#">Recipe(<span class="count-display"></span>)</a></div>
+        </div>
+    </header>
+    <main>
+        <div id="root" class="cards container">
+        </div>   
+        <div><h1 class="count-display"></h1> </div>    
+    </main>
+
+    <!-- modal -->
+    <div id="modals" class="modal">
+        <span class="close">&times;</span>
+        <img class="modalimg" id="img" src="#" alt="image">
+        <h3 id="foodType"></h3>
+        <h4 >Comments (<span class="count-comment">0</span>)</h4>
+        <div>
+            <h4 class="add-c">Add a comment</h4>
+            <ul class="all-comments">
+
+            </ul>
+      </div>
+            
+      <div class="form-sec">
+    <form id="form">
+        <div><input id="name" type="text" placeholder="name" name="name"></div>
+        <div><input id="comment" type="text" placeholder="write your comment here" name="comment"></div>
+        <div class="btn-com"><button class="comment-btn" type="submit">comment</button></div>
+    </form>
+    </div>
+</div>
+
+    <!-- footer  -->
+    <footer>
+        <p>created by Freddy&Kayonga under CC license</p>
+    </footer>
 </body>
 </html>
